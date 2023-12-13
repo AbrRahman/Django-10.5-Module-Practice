@@ -10,5 +10,29 @@
     <h1><a href="/navigation/about">About</a></h1>
     <h1><a href="/navigation/contact">Contact</a></h1>
     <h1>This is Home Page</h1>
+    <hr/>
+    <h1>Toal subject : {{subject|length}}</h1>
+    <h1>Join Filter : {{subject|join:"-"}}</h1>
+    <h1>Date Time : {{date| date:"D d M Y"}}</h1>
+    <h1>Add filter (16 + 3) : {{age| add:"3"}}</h1>
+    {% comment %} <h1>Add subject : {{subject| add:"['science']"}}</h1> {% endcomment %}
+    <h1>cut space filter : {{dec |cut:" "}}</h1>
+    <h1>list first value : {{subject |first}}</h1>
+    <h1>list last value : {{subject |last}}</h1>
+    <h1>linenumbers filter : {{subject |linenumbers}}</h1>
+     {%for i in subject%}
+      <h1>{{i|linenumbers}}</h1>
+     {%endfor%}
+
+    <h1>lowercase filter: {{dec |lower}}</h1>
+    <h1>uppercase filter: {{dec |upper}}</h1>
+    <h1>title filter: {{dec |title}}</h1>
+    <h1>random filter : {{subject |random}}</h1>
+    <h1>Slice filter : {{subject |slice:":2"}}</h1>
+    <h1>Timesince Filter : {{date |timesince}}</h1>
+    <h1>truncatechars Filter : {{dec | truncatechars:6}}</h1>
+    <h1>truncatewords Filter : {{dec | truncatewords:2}}</h1>
+    <h1>word count Filter : {{dec | wordcount}}</h1>
+    <h1>Make liste : {{dec | make_list}}</h1>
 </body>
 </html>
